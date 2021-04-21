@@ -1,4 +1,4 @@
-import 'package:chat/chat/domain/entities/message.dart';
+import 'package:chat/modules/chat/domain/entities/message.dart';
 import 'package:equatable/equatable.dart';
 
 abstract class ChatState extends Equatable {}
@@ -27,6 +27,16 @@ class ChatLoadedState extends ChatState {
 
   ChatLoadedState(this.messages);
 
+  ChatLoadedState addMessage(Message message) {
+    return ChatLoadedState(List.from(messages)..add(message));
+  }
+
   @override
   List<Object> get props => [messages];
+}
+
+extension ChatStateExtensions on ChatState {
+  ChatLoadedState updateMessages(List<Message> messages) {
+    return ChatLoadedState(messages);
+  }
 }

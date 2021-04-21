@@ -1,6 +1,6 @@
-import 'package:chat/chat/domain/entities/message.dart';
-import 'package:chat/chat/presentation/bloc/chat_cubit.dart';
-import 'package:chat/chat/presentation/bloc/chat_state.dart';
+import 'package:chat/modules/chat/domain/entities/message.dart';
+import 'package:chat/modules/chat/presentation/bloc/chat_cubit.dart';
+import 'package:chat/modules/chat/presentation/bloc/chat_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
